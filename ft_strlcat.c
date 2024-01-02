@@ -1,33 +1,46 @@
 #include <stdio.h>
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t ft_strlen(const char *s)
 {
-    size_t dst_len = 0;
+    size_t i;
+    for (i = 0; s[i]; ++i);
+    return i;
+}
 
-    while (dst_len < size && dst[dst_len] != '\0') {
-        ++dst_len;
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+    size_t i;
+    size_t j;
+
+    i = 0;
+    j = 0;
+    while (i < dstsize && dst[i])
+    {
+        i++;
     }
 
-    size_t src_len = 0;
-
-    while (dst_len + src_len + 1 < size && src[src_len] != '\0') {
-        dst[dst_len + src_len] = src[src_len];
-        ++src_len;
+    while ((i + j + 1) < dstsize && src[j])
+    {
+        dst[i + j] = src[j];
+        j++;
     }
 
-    if (dst_len + src_len < size) {
-        dst[dst_len + src_len] = '\0';
+
+    if (i < dstsize)
+    {
+        dst[i + j] = '\0';
     }
 
-    return dst_len + src_len;
+    return (i + ft_strlen(src));
 }
 
 int main()
 {
-    char d[] = "Helloiii";
+    char d[20] = "Helloiii";
     char s[] = "Jaa";
-    
-    printf("Total length: %zu\n", ft_strlcat(d, s, 4));
+
+    ft_strlcat(d, s, 8);
+    printf("total length is : %zu\n", ft_strlcat(d, s, 8));
 
     return 0;
 }
