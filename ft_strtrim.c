@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int check_set(char c, const char *set) {
-    while (*set) {
+int check_set(char c, const char *set)
+{
+    while (*set)
+    {
         if (*set == c)
             return 1;
         set++;
@@ -10,7 +12,8 @@ int check_set(char c, const char *set) {
     return 0;
 }
 
-char *ft_strtrim(const char *s1, const char *set) {
+char *ft_strtrim(const char *s1, const char *set)
+{
     if (s1 == NULL || set == NULL)
         return NULL;
 
