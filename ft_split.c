@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 15:36:27 by lhaiba            #+#    #+#             */
-/*   Updated: 2024/01/12 15:29:14 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/01/12 21:06:26 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/01/12 22:14:44 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 int    safe_malloc(char **token_v, int position, size_t buffer)
 {
@@ -38,10 +38,6 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
         ++i;
     }
     dst[i] = '\0';
-
-    while (src[i] != '\0') {
-        ++i;
-    }
 
     return i;
 }
@@ -118,7 +114,18 @@ char    **ft_split(char const *s, char c)
 int main()
 {
     char c = '_';
-    char const *s = "__Amine_is_the_best___";
-    ft_split(s , c);
+    char const *s = "__Amine_is_the_best__";
+    char **splited = ft_split(s , c);
+    int i;
+    
+    for (i= 0; splited[i] != NULL; i++)
+    {
+      printf("Token %d --> %s\n", i, splited[i]);
+    }
+    
+    i = 0;
+    while (splited[i] != NULL)
+        free(splited[i++]);
+    free(splited);
     return (0);
 }
