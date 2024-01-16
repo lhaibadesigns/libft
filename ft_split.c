@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 21:06:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/12 22:14:44 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:20:45 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ char    **ft_split(char const *s, char c)
 int main()
 {
     char c = '_';
-    char const *s = "__Amine_is_the_best__";
+    char const *s = "              __Amine_is_the_best__";
     char **splited = ft_split(s , c);
     int i;
     

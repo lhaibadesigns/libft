@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 01:15:02 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/16 02:26:43 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/16 09:30:41 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
        i++; 
     }
 
-    end = malloc((i * sizeof(char)) + 1);
+    end = malloc((i + 1) * sizeof(char));
 
     if(!end)
-    return(NULL);
+        return(NULL);
 
     end[i] = '\0';
     i = 0;
@@ -61,6 +61,7 @@ int main()
     i = 0;
     result = ft_strmapi(s , ft_new_func);
     printf("the result is: %s\n", result);
+    free(result);
     
     return(0);
 }
