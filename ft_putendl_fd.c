@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/19 18:36:30 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/20 18:09:17 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/01/20 18:10:19 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/01/20 18:14:20 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ void ft_putstr_fd(char *s, int fd)
         write(fd, s, 1);
         s++;
     }
-    
+    write(fd, "\n", 1);
 }
 
 int main()
 {
     int fd;
 
-    char s[] = "hello";
-    fd = open("hello", O_WRONLY | O_CREAT, 0777);
+    char s[] = "Amineelhaiba";
+    fd = open("test.txt", O_WRONLY | O_CREAT, 0777);
 
     ft_putstr_fd(s, fd);
     return(0);
