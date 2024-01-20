@@ -1,4 +1,5 @@
 .DS_Store
 a.out
 test.txt
-.vscode
+.vscode/
+.vscode/settings.json
