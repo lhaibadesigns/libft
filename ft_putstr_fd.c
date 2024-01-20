@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:36:30 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/20 18:06:26 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/20 18:07:59 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-
-    int i = 0;
     
-    while(s[i])
+    while(*s)
     {
         write(fd, s, 1);
         s++;
