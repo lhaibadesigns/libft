@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 15:37:41 by lhaiba            #+#    #+#             */
-/*   Updated: 2024/01/09 15:48:06 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/01/21 13:14:15 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/01/21 13:14:16 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <stdio.h>
 #include <stdlib.h>

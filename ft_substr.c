@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 15:38:05 by lhaiba            #+#    #+#             */
-/*   Updated: 2024/01/09 15:47:38 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/01/21 13:15:37 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/01/21 13:15:43 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-//#include <string.h>
+#include <string.h>
 
 char* ft_strncpy(char* destination, const char* source, size_t num) 
 {
