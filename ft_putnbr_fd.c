@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 18:50:08 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/20 21:04:46 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:46 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void ft_putnbr_fd(int n, int fd)
     }
 }
 
-int main()
+/* int main()
 {
     int n = -456789;
     int fd;
@@ -45,4 +45,4 @@ int main()
 
     ft_putnbr_fd(n , fd);
     return(0);
-}
+} */

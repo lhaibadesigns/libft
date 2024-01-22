@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:32 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:35 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:17 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
   return(0);
 }
 
-int main()
+/* int main()
 {
   char *s1 = "45if";
   char *s2 = "45ifeelhaiba";
   printf(" this is s1 : %s \n and s2 : %s \n and result is : %d", s1, s2, ft_memcmp(s1, s2, 5));
   printf("\n origin result is : %d", memcmp(s1, s2, 5));
   return(0);
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:53 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:14:56 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:06 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ size_t ft_strlcpy(char *dst, const char *src, size_t size)
     return i;
 }
 
-int main()
+/* int main()
 {
     char d[] = "Helloiii";
     char s[] = "Jaha";
     ft_strlcpy(d, s, 9);
     printf("%s", d);
     return 0;
-}
+} */

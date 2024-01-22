@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:11 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:13 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:00 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ft_isdigit(int c)
 
 }
 
-int main()
+/* int main()
 {
   char d;
 
@@ -29,4 +29,4 @@ int main()
     printf("%c is a digt", d);
   } else { printf("%c its not a digt", d);}
 return(0);
-}
+} */

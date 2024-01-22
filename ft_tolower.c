@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:48 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:15:50 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:47 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ft_tolower(int c)
   } else { return (0);}
 }
 
-int main()
+/* int main()
 {
   char c;
 
@@ -28,3 +28,4 @@ int main()
     printf ("this is the first char %c, and this is the second one %c\n", c, ft_tolower(c));
   return (0);
 }
+ */

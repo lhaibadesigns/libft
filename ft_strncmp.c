@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:09 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:15:11 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:22 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
   return 0;
 }
 
-int main()
+/* int main()
 {
   const char *s1 = "Amine";
   const char *s2 = "Amineelhaiba";
@@ -34,4 +34,4 @@ int main()
 
   printf("s1: %s, s2: %s, n: %d, Result: %d\n", s1, s2, n, ft_strncmp(s1, s2, n));
   return 0;
-}
+} */

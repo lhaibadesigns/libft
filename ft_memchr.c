@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:28 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:13 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void *ft_memchr(const void *s, int c, size_t n)
   return(NULL);
 }
 
-int main()
+/* int main()
 {
   char *s = "Amineelhaiba";
   printf("this is the result: %s", (const char *)ft_memchr( s, '\0', 3));
   return(0);
-}
+} */

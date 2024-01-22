@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 18:10:19 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/20 20:54:38 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:41 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_putstr_fd(char *s, int fd)
     write(fd, "\n", 1);
 }
 
-int main()
+/* int main()
 {
     int fd;
 
@@ -33,4 +33,4 @@ int main()
 
     ft_putstr_fd(s, fd);
     return(0);
-}
+} */

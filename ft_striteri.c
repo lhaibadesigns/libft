@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:13:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/19 17:18:12 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:29:52 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     }
 }
 
-int main()
+/* int main()
 {
     int fd = open("file.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
 
@@ -43,4 +43,4 @@ int main()
     ft_striteri(s, ft);
     printf("s = :%s", s);
     return (0);
-}
+} */

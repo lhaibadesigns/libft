@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:12:29 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:27:18 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void ft_bzero(void *s, size_t n) {
     }
 }
 
-int main() {
+/* int main() {
     char str[] = "Amineee";
     size_t i;
 
@@ -30,3 +30,4 @@ int main() {
 
     return 0;
 }
+ */

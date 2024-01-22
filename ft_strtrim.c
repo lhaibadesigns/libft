@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:15:31 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:36 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char *ft_strtrim(const char *s1, const char *set)
     return trimmed_str;
 }
 
-int main() {
+/* int main() {
     const char *s1 = "#&amine#&";
     const char *set = "#&";
 
@@ -72,4 +72,4 @@ int main() {
     free(trimmed_str);
     
     return EXIT_SUCCESS;
-}
+} */

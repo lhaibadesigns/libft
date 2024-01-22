@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:12:39 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:27:25 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void *ft_calloc(size_t count, size_t size)
     return NULL;
 }
 
-int main()
+/* int main()
 {
     char *ptr;
     size_t n;
@@ -66,3 +66,4 @@ int main()
 
     return 0;
 }
+ */

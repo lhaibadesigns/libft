@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:54 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:15:57 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:53 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int ft_toupper(int c)
 
 }
 
-int main()
+/* int main()
 {
   char ch;
 
@@ -29,3 +29,4 @@ int main()
   printf("the first char is %c, and the second one is %c", ch, ft_toupper(ch));
   return (0);
 }
+ */

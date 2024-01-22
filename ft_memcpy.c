@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:38 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:41 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:22 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 }
 
-int main()
+/* int main()
 {
     char s[] = "amine";
     char dst[] = "AMINEELHA";
     printf("this is the result : %s", (char *)ft_memcpy(dst, s, 4));
     return(0);
-}
+} */

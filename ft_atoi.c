@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:55 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/09 15:48:37 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:26:51 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,10 @@ int	ft_atoi(const char *str)
 	return (number * sign);
 }
 
-int main()
+/* int main()
 {
     char *s = "      -+--136ahs768";
     printf("%d", ft_atoi(s));
     return (0);
 }
+*/

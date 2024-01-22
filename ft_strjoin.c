@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:40 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:14:42 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:29:56 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char* ft_strjoin(const char* s1, const char* s2) {
     return total;
 }
 
-int main() {
+/* int main() {
     const char* s1 = "whsup ";
     const char* s2 = "bruh!";
 
@@ -52,4 +52,4 @@ int main() {
     }
 
     return 0;
-}
+} */

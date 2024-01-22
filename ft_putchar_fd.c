@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:18:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/19 18:33:51 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:38 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void ft_putchar_fd(char c, int fd)
     write(fd, &c, 1);
 }
 
-int main()
+/* int main()
 {
     int fd;
     fd = open("hello.c", O_WRONLY | O_CREAT | O_TRUNC, 0777);
     ft_putchar_fd('5', 1);
     return(0);
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:08 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:14:11 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:29:45 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char *ft_strchr(const char *s, int c)
     return((char *)&s[i]);
 }
 
-int main()
+/* int main()
 {
   const char *s = "Amine el haiba";
   char c = 'l';
@@ -35,3 +35,4 @@ int main()
   
 
 }
+ */

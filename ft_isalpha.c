@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:57 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:12:59 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:27:34 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
   } else { return (0);}
 }
 
-int main()
+/* int main()
 {
   char ch;
 
@@ -29,3 +29,4 @@ int main()
   } else { printf("its not an alpha"); }
   return (0);
 }
+ */

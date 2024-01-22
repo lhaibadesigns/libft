@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 01:15:02 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/16 09:30:41 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:30:13 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
     return(originalEnd);
 }
-
+/* 
 int main()
 {
     char const *s = "Amineelhaiba";
@@ -64,4 +64,4 @@ int main()
     free(result);
     
     return(0);
-}
+} */

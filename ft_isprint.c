@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:17 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:20 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:04 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_isprint(int c) {
   } else { return (0);}
 }
 
-int main() {
+/* int main() {
     char c;
 
     c = 'J';
@@ -30,4 +30,4 @@ int main() {
     }
 
     return 0;
-}
+} */

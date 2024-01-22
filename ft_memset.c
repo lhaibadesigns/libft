@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:51 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/21 13:13:53 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:32 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void *ft_memset(void *s, int c, size_t n) {
     return s;
 }
 
-int main()
+/* int main()
 {
     char str[7];
     char c;
@@ -31,4 +31,4 @@ int main()
     c = 'i';
     printf("this is the result: %s\n", (unsigned char *)ft_memset( str, c, 9));
     return(0);
-}
+} */

@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:33:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/15 15:20:24 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:28:10 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char *ft_itoa(int num) {
     return result;
 }
 
-int main() {
+/* int main() {
     int num = -12345;
     char *str = ft_itoa(num);
 
@@ -76,4 +76,4 @@ int main() {
     }
 
     return 0;
-}
+} */
