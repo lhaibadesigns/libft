@@ -6,12 +6,13 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:32 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:28:17 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:39:59 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {

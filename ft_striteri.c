@@ -6,13 +6,14 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:13:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:29:52 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:40:39 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include "libft.h"
 
 void ft( unsigned int i, char *c)
 {

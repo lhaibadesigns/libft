@@ -6,12 +6,13 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 21:06:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:29:14 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:40:29 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
 
 int    safe_malloc(char **token_v, int position, size_t buffer)
 {

@@ -6,12 +6,13 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:33:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:28:10 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:39:52 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_itoa(int num) {
     int n = num;

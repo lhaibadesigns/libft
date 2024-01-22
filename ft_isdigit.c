@@ -6,11 +6,12 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:11 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:28:00 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:39:45 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
 int ft_isdigit(int c)
 {

@@ -6,13 +6,14 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:36:30 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:28:49 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:40:24 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include "libft.h"
 
 void ft_putstr_fd(char *s, int fd)
 {
