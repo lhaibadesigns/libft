@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:13:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:40:39 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:55:10 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 #include <fcntl.h>
 #include "libft.h"
 
-void ft( unsigned int i, char *c)
+void f( unsigned int i, char *c)
 {
+    i = 0;
   *c = 'a';
 }
 
@@ -27,7 +28,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     i = 0;
     while (s[i])
     {
-        ft(i , &s[i]);
+        f(i , &s[i]);
         i++;
     }
 }
@@ -41,7 +42,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     return 0;
     
     char s[] = "Amine";
-    ft_striteri(s, ft);
+    ft_striteri(s, f);
     printf("s = :%s", s);
     return (0);
 } */

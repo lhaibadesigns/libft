@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:15 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:40:36 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:52:19 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
+
+char *ft_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 char *ft_strdup(const char *s1)
 {
@@ -27,7 +41,7 @@ char *ft_strdup(const char *s1)
     char* dup = (char*)malloc(len + 1);
 
     if (dup != NULL) {
-        ft_strcpy(dup, s1);
+        ft_strcpy(dup, (char *)s1);
     }
 
     return dup;
