@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:37 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:42:52 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/22 23:46:33 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "libft.h"
-
-char* ft_substr(const char* str, int start, int len);
 
 char* ft_strncpy(char* destination, const char* source, size_t num) 
 {
@@ -43,14 +41,13 @@ char* ft_strncpy(char* destination, const char* source, size_t num)
 
     return destination;
 }
-
-char* ft_substr(const char* str, int start, int len)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    if (str == NULL || start < 0 || len < 0) {
+    if (s == NULL || start < 0 || len < 0) {
         return NULL;
     }
 
-    int str_len = ft_strlen(str);
+    size_t str_len = ft_strlen(s);
     if (start >= str_len) {
         return NULL;
     }
@@ -61,7 +58,7 @@ char* ft_substr(const char* str, int start, int len)
         return NULL;
     }
 
-    ft_strncpy(substring, str + start, sec_len);
+    ft_strncpy(substring, s + start, sec_len);
     substring[sec_len] = '\0';
     return substring;
 }
