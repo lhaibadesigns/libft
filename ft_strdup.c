@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:15 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:52:19 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 00:00:46 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char *ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return (dest);
 }
 
 char *ft_strdup(const char *s1)
