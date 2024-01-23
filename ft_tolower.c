@@ -6,19 +6,22 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:48 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:41:21 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:14:37 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_tolower(int c) 
+int	ft_tolower(int c)
 {
-  if ( c >= 65 && c <= 90)
-  {
-    return (c + 32);
-  } else { return (0);}
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	else
+	{
+		return (c);
+	}
 }
 
 /* int main()
@@ -26,7 +29,8 @@ int ft_tolower(int c)
   char c;
 
   c = 'D';
-    printf ("this is the first char %c, and this is the second one %c\n", c, ft_tolower(c));
+	printf ("this is the first char %c, and this is the second one %c\n", c,
+		ft_tolower(c));
   return (0);
 }
  */

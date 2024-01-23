@@ -6,54 +6,55 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:46 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:40:48 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:13:54 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t i;
-    for (i = 0; s[i]; ++i);
-    return i;
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		++i;
+	}
+	return (i);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t i;
-    size_t j;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    j = 0;
-    while (i < dstsize && dst[i])
-    {
-        i++;
-    }
-
-    while ((i + j + 1) < dstsize && src[j])
-    {
-        dst[i + j] = src[j];
-        j++;
-    }
-
-
-    if (i < dstsize)
-    {
-        dst[i + j] = '\0';
-    }
-
-    return (i + ft_strlen(src));
+	i = 0;
+	while (i < dstsize && dst[i] != '\0')
+	{
+		++i;
+	}
+	j = 0;
+	while ((i + j + 1) < dstsize && src[j] != '\0')
+	{
+		dst[i + j] = src[j];
+		++j;
+	}
+	if (i < dstsize)
+	{
+		dst[i + j] = '\0';
+	}
+	return (i + ft_strlen(src));
 }
-/* 
-int main()
+
+/*
+int	main(void)
 {
-    char d[20] = "Helloiii";
-    char s[] = "Jaa";
+	char d[20] = "Helloiii";
+	char s[] = "Jaa";
 
-    ft_strlcat(d, s, 8);
-    printf("total length is : %zu\n", ft_strlcat(d, s, 8));
+	ft_strlcat(d, s, 8);
+	printf("total length is : %zu\n", ft_strlcat(d, s, 8));
 
-    return 0;
+	return (0);
 } */

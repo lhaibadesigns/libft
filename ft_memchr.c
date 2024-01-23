@@ -6,26 +6,25 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:39:56 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:13:06 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-  const char * str = (const char *)s;
-  size_t i;
+	const char	*str = (const char *)s;
+	size_t		i;
 
-  i = 0;
-  while (i < n)
-  {
-    if (str[i] == c)
-    return ((void *)&str[i]);
-    i++;
-  }
-  return(NULL);
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == c)
+			return ((void *)&str[i]);
+		i++;
+	}
+	return (NULL);
 }
 
 /* int main()

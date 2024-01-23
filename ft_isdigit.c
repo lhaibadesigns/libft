@@ -6,19 +6,22 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:11 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:39:45 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:12:57 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-  if (c >= '0' && c <= '9')
-  { return(1);
-  } else {return (0);}
-
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
 /* int main()
@@ -27,7 +30,7 @@ int ft_isdigit(int c)
 
   d = '8';
   if (ft_isdigit (d)) {
-    printf("%c is a digt", d);
+	printf("%c is a digt", d);
   } else { printf("%c its not a digt", d);}
 return(0);
 } */

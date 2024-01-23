@@ -6,35 +6,32 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:55 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:39:21 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:12:39 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)
 {
-    int sign;
-	int number;
+	int	sign;
+	int	number;
 
 	sign = 1;
 	number = 0;
 	if (str == NULL)
-		return number;
-
-	while (*str == ' ' || *str == '\r' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f')
-	{
+		return (number);
+	while (*str == ' ' || *str == '\r' || *str == '\t' || *str == '\n'
+		|| *str == '\v' || *str == '\f')
 		str++;
-	}
-
-	while (*str == '+' || *str == '-')
+	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-			sign *= -1;
+			sign = -1;
+		else
+			sign = 1;
 		str++;
 	}
-
 	while (*str >= '0' && *str <= '9')
 	{
 		number *= 10;
@@ -44,10 +41,12 @@ int	ft_atoi(const char *str)
 	return (number * sign);
 }
 
-/* int main()
+/* int	main(void)
 {
-    char *s = "      -+--136ahs768";
-    printf("%d", ft_atoi(s));
-    return (0);
+	char	*s;
+
+	s = "      +-54";
+	printf("%d", ft_atoi(s));
+	return (0);
 }
-*/
+ */

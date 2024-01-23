@@ -6,71 +6,70 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:41:13 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:14:24 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
-int check_set(char c, const char *set)
+int	check_set(char c, const char *set)
 {
-    while (*set)
-    {
-        if (*set == c)
-            return 1;
-        set++;
-    }
-    return 0;
+	while (*set)
+	{
+		if (*set == c)
+			return (1);
+		set++;
+	}
+	return (0);
 }
 
-char *ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-    if (s1 == NULL || set == NULL)
-        return NULL;
+	size_t	start;
+	size_t	end;
+	size_t	trimmed_len;
+	char	*trimmed_str;
+	size_t	i;
 
-    size_t start = 0;
-    size_t end = 0;
-
-    while (s1[start] && check_set(s1[start], set))
-        start++;
-
-    end = start;
-    while (s1[end] && !check_set(s1[end], set))
-        end++;
-
-    size_t trimmed_len = end - start;
-    char *trimmed_str = (char *)malloc(trimmed_len + 1);
-
-    if (trimmed_str == NULL)
-        return NULL;
-    size_t i = 0;
-    while ( i < trimmed_len)
-    {
-        trimmed_str[i] = s1[start + i];
-        i++;
-    }
-
-    trimmed_str[trimmed_len] = '\0';
-
-    return trimmed_str;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	start = 0;
+	end = 0;
+	while (s1[start] && check_set(s1[start], set))
+		start++;
+	end = start;
+	while (s1[end] && !check_set(s1[end], set))
+		end++;
+	trimmed_len = end - start;
+	trimmed_str = (char *)malloc(trimmed_len + 1);
+	if (trimmed_str == NULL)
+		return (NULL);
+	i = 0;
+	while (i < trimmed_len)
+	{
+		trimmed_str[i] = s1[start + i];
+		i++;
+	}
+	trimmed_str[trimmed_len] = '\0';
+	return (trimmed_str);
 }
 
-/* int main() {
-    const char *s1 = "#&amine#&";
-    const char *set = "#&";
+/* int	main(void)
+{
+	const char *s1 = "#&amine#&";
+	const char *set = "#&";
 
-    char *trimmed_str = ft_strtrim(s1, set);
-    if (trimmed_str == NULL) {
-        fprintf(stderr, "Error: Memory allocation failed.\n");
-        return EXIT_FAILURE;
-    }
+	char *trimmed_str = ft_strtrim(s1, set);
+	if (trimmed_str == NULL)
+	{
+		fprintf(stderr, "Error: Memory allocation failed.\n");
+		return (EXIT_FAILURE);
+	}
 
-    printf("Original String: /%s/\n", s1);
-    printf("Trimmed String:  /%s/\n", trimmed_str);
+	printf("Original String: /%s/\n", s1);
+	printf("Trimmed String:  /%s/\n", trimmed_str);
 
-    free(trimmed_str);
-    
-    return EXIT_SUCCESS;
+	free(trimmed_str);
+
+	return (EXIT_SUCCESS);
 } */

@@ -6,29 +6,31 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:39:27 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:12:43 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n) {
-    unsigned char *ptr = s;
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
 
-    while (n-- > 0) {
-        *ptr++ = '\0';
-    }
+	ptr = s;
+	while (n-- > 0)
+	{
+		*ptr++ = '\0';
+	}
 }
 
 /* int main() {
-    char str[] = "Amineee";
-    size_t i;
+	char str[] = "Amineee";
+	size_t i;
 
-    i = 0;
-    ft_bzero(str, i);
-    printf("this is the result: %s\n", str);
+	i = 0;
+	ft_bzero(str, i);
+	printf("this is the result: %s\n", str);
 
-    return 0;
+	return (0);
 }
  */

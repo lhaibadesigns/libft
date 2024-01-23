@@ -6,28 +6,31 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:54 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:41:24 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:14:40 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-  if (c >= 97 && c <= 122)
-  {
-    return (c - 32);
-  } else { return (0);}
-
+	if (c >= 97 && c <= 122)
+	{
+		return (c - 32);
+	}
+	else
+	{
+		return (c);
+	}
 }
 
-/* int main()
+/* int	main(void)
 {
-  char ch;
+	char	ch;
 
-  ch = 'A';
-  printf("the first char is %c, and the second one is %c", ch, ft_toupper(ch));
-  return (0);
+	ch = 'A';
+	printf("the first char is %c, and the second one is %c", ch,
+		ft_toupper(ch));
+	return (0);
 }
  */

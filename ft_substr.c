@@ -6,74 +6,59 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:37 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:46:33 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:14:30 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
-char* ft_strncpy(char* destination, const char* source, size_t num) 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    if (destination == NULL || source == NULL || num == 0) 
-    {
-        return destination;
-    }
+	size_t	str_len;
+	int		sec_len;
+	char	*substring;
+	char	*dest_ptr;
 
-    char* dest_ptr = destination;
-
-    while (*source != '\0' && num > 0) 
-    {
-        *dest_ptr = *source;
-        dest_ptr++;
-        source++;
-        num--;
-    }
-
-    while (num > 0) 
-    {
-        *dest_ptr = '\0';
-        dest_ptr++;
-        num--;
-    }
-
-    return destination;
-}
-char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    if (s == NULL || start < 0 || len < 0) {
-        return NULL;
-    }
-
-    size_t str_len = ft_strlen(s);
-    if (start >= str_len) {
-        return NULL;
-    }
-
-    int sec_len = (start + len > str_len) ? (str_len - start) : len;
-    char* substring = (char*)malloc((sec_len + 1) * sizeof(char));
-    if (substring == NULL) {
-        return NULL;
-    }
-
-    ft_strncpy(substring, s + start, sec_len);
-    substring[sec_len] = '\0';
-    return substring;
+	if (s == NULL || len < 0)
+		return (NULL);
+	str_len = ft_strlen(s);
+	if (start >= str_len)
+		return (NULL);
+	if (start + len > str_len)
+		sec_len = str_len - start;
+	else
+		sec_len = len;
+	substring = malloc((sec_len + 1) * sizeof(char));
+	if (substring == NULL)
+		return (NULL);
+	dest_ptr = substring;
+	while (*s && start--)
+		s++;
+	while (*s && len--)
+	{
+		*dest_ptr = *s;
+		dest_ptr++;
+		s++;
+	}
+	*dest_ptr = '\0';
+	return (substring);
 }
 
-/* int main()
+/*
+int	main(void)
 {
-    const char* original = "Amine el haiba";
+	const char *original = "Amine el haiba";
 
-    char* result = ft_substr(original, -3, 8);
-    if (result != NULL) {
-        printf("Substring is :%s\n", result);
-        free(result);
-    } else {
-        printf("wrong input : Error\n");
-    }
+	char *result = ft_substr(original, 400, 20);
+	if (result != NULL)
+	{
+		printf("Substring is :%s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("wrong input : Error\n");
+	}
 
-    return 0;
+	return (0);
 } */

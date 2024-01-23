@@ -6,19 +6,15 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:15 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 00:00:46 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:13:45 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
@@ -27,36 +23,38 @@ char *ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
+	return (dest);
 }
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    if (s1 == NULL) {
-        return NULL;  
-    }
+	size_t	len;
+	char	*dup;
 
-    size_t len = ft_strlen(s1);
-
-    char* dup = (char*)malloc(len + 1);
-
-    if (dup != NULL) {
-        ft_strcpy(dup, (char *)s1);
-    }
-
-    return dup;
+	if (s1 == NULL)
+	{
+		return (NULL);
+	}
+	len = ft_strlen(s1);
+	dup = (char *)malloc(len + 1);
+	if (dup != NULL)
+	{
+		ft_strcpy(dup, (char *)s1);
+	}
+	return (dup);
 }
 /* int main() {
-    const char* s1 = "Hello, World!";
+	const char* s1 = "Hello, World!";
 
-    char* dup = ft_strdup(s1);
-    if (dup != NULL) {
-        printf("the s1 is : %s\n", s1);
-        printf("the strdup is : %s\n", dup);
+	char* dup = ft_strdup(s1);
+	if (dup != NULL) {
+		printf("the s1 is : %s\n", s1);
+		printf("the strdup is : %s\n", dup);
 
-        free(dup);
-    } else {
-        printf("failed\n");
-    }
+		free(dup);
+	} else {
+		printf("failed\n");
+	}
 
-    return 0;
+	return (0);
 } */

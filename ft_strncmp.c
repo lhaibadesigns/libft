@@ -6,33 +6,37 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:09 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/22 23:41:02 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 06:14:13 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-  size_t i = 0;
-  
-  while ((s1[i] || s2[i]) && i < n)
-  {
-    if (s1[i] != s2[i])
-      return (s1[i] - s2[i]);
-    i++;
-  }
+	unsigned char	*ss1;
+	unsigned char	*ss2;
+	size_t			i;
 
-  return 0;
+	ss1 = (unsigned char *)s1;
+	ss2 = (unsigned char *)s2;
+	i = 0;
+	while ((i < n) && (ss1[i] != '\0' || ss2[i] != '\0'))
+	{
+		if (ss1[i] != ss2[i])
+			return (ss1[i] - ss2[i]);
+		i++;
+	}
+	return (0);
 }
 
-/* int main()
+/* int	main(void)
 {
-  const char *s1 = "Amine";
-  const char *s2 = "Amineelhaiba";
-  int n = 4;
+	const char *s1 = "test0";
+	const char *s2 = "test200";
+	int n = 6;
 
-  printf("s1: %s, s2: %s, n: %d, Result: %d\n", s1, s2, n, ft_strncmp(s1, s2, n));
-  return 0;
+	printf("s1: %s, s2: %s, n: %d, Result: %d\n", s1, s2, n, ft_strncmp(s1, s2,
+			n));
+	return (0);
 } */
