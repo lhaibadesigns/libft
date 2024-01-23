@@ -6,12 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:33:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 07:50:34 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 07:57:49 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_itoa(int num)
 {
@@ -61,7 +60,7 @@ char	*ft_itoa(int num)
 	return (result);
 }
 
-int main() {
+/* int main() {
 	int num = -2147483648;
 	char *str = ft_itoa(num);
 
@@ -75,4 +74,4 @@ int main() {
 	}
 
 	return (0);
-}
+} */
