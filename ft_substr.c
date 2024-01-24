@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:37 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:14:30 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:12:00 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	str_len = ft_strlen(s);
 	if (start >= str_len)
-		return (NULL);
-	if (start + len > str_len)
+		sec_len = 0;
+	else if (start + len > str_len)
 		sec_len = str_len - start;
 	else
 		sec_len = len;

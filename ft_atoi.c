@@ -6,11 +6,12 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:55 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:12:39 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 00:12:54 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -41,12 +42,11 @@ int	ft_atoi(const char *str)
 	return (number * sign);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	char	*s;
 
-	s = "      +-54";
+	s = "      +54";
 	printf("%d", ft_atoi(s));
 	return (0);
 }
- */

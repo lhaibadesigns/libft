@@ -6,15 +6,16 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:33:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 07:57:49 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:05:38 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_itoa(int num)
 {
-	int		n;
+	long int n;
 	int		count;
 	int		i;
 	char	*result;
@@ -40,10 +41,12 @@ char	*ft_itoa(int num)
 	if (num < 0)
 	{
 		count++;
-		n = -num;
+		n = (long int)num * -1;
 	}
 	else
+	{
 		n = num;
+	}
 	result = (char *)malloc((count + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
@@ -59,19 +62,22 @@ char	*ft_itoa(int num)
 	result[count] = '\0';
 	return (result);
 }
+/* 
+int main() {
 
-/* int main() {
-	int num = -2147483648;
+	int num = 0;
 	char *str = ft_itoa(num);
 
-	if (str != NULL) {
+	printf("str: %s\n", str);
+
+		if (str != NULL) {
 		printf("Integer: %d\n", num);
 		printf("String: %s\n", str);
 
 		free(str);
 	} else {
 		printf("Memory allocation error\n");
-	}
+	} 
 
 	return (0);
 } */

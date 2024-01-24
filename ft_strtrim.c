@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 07:58:00 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/23 08:38:28 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	check_set(char c, const char *set)
 {
-	while (*set)
-	{
+    while (*set)
+    {
 		if (*set == c)
 			return (1);
-		set++;
-	}
+        set++;
+    }
 	return (0);
 }
 
@@ -56,8 +56,8 @@ char	*ft_strtrim(const char *s1, const char *set)
 
 /* int	main(void)
 {
-	const char *s1 = "#&amine#&";
-	const char *set = "#&";
+	const char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+	const char *set = " ";
 
 	char *trimmed_str = ft_strtrim(s1, set);
 	if (trimmed_str == NULL)
