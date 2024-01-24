@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+         #
+#    By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 13:12:07 by ael-haib          #+#    #+#              #
-#    Updated: 2024/01/23 00:26:45 by ael-haib         ###   ########.fr        #
+#    Updated: 2024/01/25 00:09:40 by ael-haib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,32 +20,56 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c
 
-#BSOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-
 OBJECTS = $(SOURCES:.c=.o)
-BOBJECTS = $(BSOURCES:.c=.o)
 
 CC = gcc
+AR = ar
 CFLAGS = -Wall -Wextra -Werror
+
+# ANSI escape codes for colors
+GREEN = \033[32m
+RESET = \033[0m
+
+
+define PRINT_LOADING
+	@printf "$(GREEN)Removing!... ["
+	@for i in $(shell seq 0 10 800); do \
+		printf "▓"; \
+		sleep 0.01; \
+	done
+	@printf "] 100%%$(RESET)\n"
+endef
+
+define PRINT_LOADINGTWO
+	@printf "$(GREEN)Compiling!... ["
+	@for i in $(shell seq 0 10 800); do \
+		printf "▓"; \
+		sleep 0.008; \
+	done
+	@printf "] 100%%$(RESET)\n"
+endef
+
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(AR) -r $@ $^
-
-bonus: $(OBJECTS) $(BOBJECTS)
-	$(AR) -r $(NAME) $^
+$(NAME): $(OBJECTS) 
+	$(PRINT_LOADINGTWO)
+	@$(AR) -rcs $@ $^ >/dev/null 2>&1
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $<
+	@$(CC) -c $(CFLAGS) $<
+	
+
 
 clean:
-	rm -f $(OBJECTS) $(BOBJECTS)
+	$(PRINT_LOADING)
+	@rm -f $(OBJECTS)
+
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re
