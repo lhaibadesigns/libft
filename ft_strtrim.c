@@ -6,52 +6,33 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/24 10:53:06 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:03:49 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	check_set(char c, const char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	while (*set)
-	{
-		if (*set == c)
-			return (1);
-		set++;
-	}
-	return (0);
-}
-
-char	*ft_strtrim(const char *s1, const char *set)
-{
-	size_t	start;
-	size_t	end;
-	size_t	trimmed_len;
-	char	*trimmed_str;
 	size_t	i;
+	size_t	j;
+	char	*str;
 
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-	start = 0;
-	end = 0;
-	while (s1[start] && check_set(s1[start], set))
-		start++;
-	end = start;
-	while (s1[end] && !check_set(s1[end], set))
-		end++;
-	trimmed_len = end - start;
-	trimmed_str = (char *)malloc(trimmed_len + 1);
-	if (trimmed_str == NULL)
-		return (NULL);
-	i = 0;
-	while (i < trimmed_len)
+	str = 0;
+	if (s1 && set)
 	{
-		trimmed_str[i] = s1[start + i];
-		i++;
+		i = 0;
+		j = ft_strlen(s1);
+		while (s1[i] && ft_strchr(set, s1[i]))
+			i++;
+		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
+			j--;
+		str = (char *)malloc(sizeof(char) * (j - i + 1));
+		if (str)
+			ft_strlcpy(str, &s1[i], j - i + 1);
 	}
-	trimmed_str[trimmed_len] = '\0';
-	return (trimmed_str);
+	return (str);
 }
 
 /* int	main(void)
