@@ -6,50 +6,50 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 13:33:24 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 13:05:38 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:10:56 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_itoa(int num)
+int	count_digits(int num)
 {
-	long int n;
-	int		count;
-	int		i;
-	char	*result;
+	int	count;
 
-	n = num;
 	count = 0;
-	while (n != 0)
+	while (num != 0)
 	{
-		n /= 10;
+		num /= 10;
 		count++;
 	}
+	return (count);
+}
+
+char	*allocate_result(int num, int count)
+{
+	char	*result;
+
+	result = NULL;
 	if (num == 0)
 	{
 		result = (char *)malloc(2 * sizeof(char));
-		if (result == NULL)
+		if (result != NULL)
 		{
-			return (NULL);
+			result[0] = '0';
+			result[1] = '\0';
 		}
-		result[0] = '0';
-		result[1] = '\0';
-		return (result);
-	}
-	if (num < 0)
-	{
-		count++;
-		n = (long int)num * -1;
 	}
 	else
 	{
-		n = num;
+		result = (char *)malloc((count + 1) * sizeof(char));
 	}
-	result = (char *)malloc((count + 1) * sizeof(char));
-	if (result == NULL)
-		return (NULL);
+	return (result);
+}
+
+void	fill_result(char *result, long int n, int count)
+{
+	int	i;
+
 	i = (count - 1);
 	while (i >= 0)
 	{
@@ -57,27 +57,50 @@ char	*ft_itoa(int num)
 		n /= 10;
 		i--;
 	}
+}
+
+char	*ft_itoa(int num)
+{
+	long int	n;
+	char		*result;
+	int			count;
+
+	count = count_digits(num);
 	if (num < 0)
-		result[0] = '-';
-	result[count] = '\0';
+	{
+		count++;
+		n = (long int)num * -1;
+	}
+	else
+		n = num;
+	result = allocate_result(num, count);
+	if (result != NULL)
+	{
+		fill_result(result, n, count);
+		if (num < 0)
+			result[0] = '-';
+		if (count)
+			result[count] = '\0';
+	}
 	return (result);
 }
-/* 
-int main() {
 
-	int num = 0;
-	char *str = ft_itoa(num);
+/* int    main(void)
+{
+	int        num;
+	char    *str;
 
-	printf("str: %s\n", str);
-
-		if (str != NULL) {
+	num = 0;
+	str = ft_itoa(num);
+	if (str != NULL)
+	{
 		printf("Integer: %d\n", num);
 		printf("String: %s\n", str);
-
 		free(str);
-	} else {
+	}
+	else
+	{
 		printf("Memory allocation error\n");
-	} 
-
+	}
 	return (0);
 } */

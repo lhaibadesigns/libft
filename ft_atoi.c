@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:55 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/24 00:12:54 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 11:13:39 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *str)
 	return (number * sign);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*s;
 
@@ -50,3 +50,4 @@ int	main(void)
 	printf("%d", ft_atoi(s));
 	return (0);
 }
+ */

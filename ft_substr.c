@@ -6,21 +6,17 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:37 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 13:12:00 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:37:39 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static size_t	get_substr_len(char const *s, unsigned int start, size_t len)
 {
 	size_t	str_len;
 	int		sec_len;
-	char	*substring;
-	char	*dest_ptr;
 
-	if (s == NULL || len < 0)
-		return (NULL);
 	str_len = ft_strlen(s);
 	if (start >= str_len)
 		sec_len = 0;
@@ -28,6 +24,18 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sec_len = str_len - start;
 	else
 		sec_len = len;
+	return (sec_len);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	sec_len;
+	char	*substring;
+	char	*dest_ptr;
+
+	if (s == NULL || len < 0)
+		return (NULL);
+	sec_len = get_substr_len(s, start, len);
 	substring = malloc((sec_len + 1) * sizeof(char));
 	if (substring == NULL)
 		return (NULL);
@@ -44,8 +52,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substring);
 }
 
-/*
-int	main(void)
+/* int	main(void)
 {
 	const char *original = "Amine el haiba";
 

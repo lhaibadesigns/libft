@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 08:38:28 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 10:53:06 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	check_set(char c, const char *set)
 {
-    while (*set)
-    {
+	while (*set)
+	{
 		if (*set == c)
 			return (1);
-        set++;
-    }
+		set++;
+	}
 	return (0);
 }
 

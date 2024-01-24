@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 23:22:17 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 05:31:47 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:27:23 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
+# include <stddef.h>
 # include <unistd.h>
+# include <string.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	*ft_memset(void *b, int c, size_t len);
