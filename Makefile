@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+         #
+#    By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 13:12:07 by ael-haib          #+#    #+#              #
-#    Updated: 2024/01/25 00:09:40 by ael-haib         ###   ########.fr        #
+#    Updated: 2024/01/25 03:17:06 by ael-haib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ CC = gcc
 AR = ar
 CFLAGS = -Wall -Wextra -Werror
 
-# ANSI escape codes for colors
 GREEN = \033[32m
 RESET = \033[0m
 
