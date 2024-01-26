@@ -6,11 +6,12 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:12:46 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/26 21:34:09 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -19,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*char_ptr;
 	size_t	i;
 
-	if (count && size)
+	if ((int)count >= 0 && (int)size >= 0)
 	{
 		total = count * size;
 		y = malloc(total);
@@ -39,26 +40,14 @@ void	*ft_calloc(size_t count, size_t size)
 
 /* int main()
 {
-	char	*ptr;
-	size_t	n;
-	size_t	i;
+	char	*ptr = ft_calloc(0, 0);
+	char	*ptr2 = calloc(0, 0);
 
-	n = 5;
-	ptr = (char *)ft_calloc(n, sizeof(int));
-	if (ptr != NULL)
-	{
-		i = 0;
-		while (i < n * sizeof(int))
-		{
-			printf("%d ", ptr[i]);
-			++i;
-		}
-		free(ptr);
-	}
-	else
-	{
-		printf("calloc failed\n");
-	}
+	printf("%c\n", *ptr);
+	printf("%c\n", *ptr2);
+
+	printf("ptr: %p\n", ptr);
+	printf("ptr2: %p\n", ptr2);
 	return (0);
 }
  */

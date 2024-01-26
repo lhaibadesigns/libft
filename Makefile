@@ -6,7 +6,7 @@
 #    By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 13:12:07 by ael-haib          #+#    #+#              #
-#    Updated: 2024/01/25 03:17:06 by ael-haib         ###   ########.fr        #
+#    Updated: 2024/01/25 17:55:35 by ael-haib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS) 
 	$(PRINT_LOADINGTWO)
-	@$(AR) -rcs $@ $^ >/dev/null 2>&1
+	@$(AR) -rcs $@ $^ >/dev/null
 
 %.o: %.c
 	@$(CC) -c $(CFLAGS) $<
@@ -67,6 +67,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME)
+	@clear
 	
 
 re: fclean all

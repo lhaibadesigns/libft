@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:15 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:13:45 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/26 22:59:20 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,6 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 	char	*dup;
 
-	if (s1 == NULL)
-	{
-		return (NULL);
-	}
 	len = ft_strlen(s1);
 	dup = (char *)malloc(len + 1);
 	if (dup != NULL)

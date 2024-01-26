@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 21:06:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:13:37 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/26 21:36:03 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	safe_malloc(char **token_v, int position, size_t buffer)
 	return (0);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+/* size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
@@ -40,7 +40,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	dst[i] = '\0';
 	return (i);
-}
+} */
 
 int	fill(char **token_v, char const *s, char delimeter)
 {

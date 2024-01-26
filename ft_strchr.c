@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:08 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/25 00:48:21 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/26 22:14:46 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
 	while (s[i] != (unsigned char)c)
 	{
 		if (s[i] == '\0')

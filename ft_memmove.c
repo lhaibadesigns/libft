@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:45 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:13:14 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/26 23:02:01 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	const unsigned char	*s = src;
 
 	d = dest;
+	if (d == s)
+		return (dest);
 	if (d < s || d >= s + len)
 	{
 		while (len--)
@@ -39,8 +41,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 /* int main()
 {
-	char d[] = "Helloaaaa";
-	char s[] = "Jahaiioh";
+	char d[] = "";
+	char s[] = "";
 	ft_memmove(d, s, 9);
 	printf("%s", d);
 	return (0);
