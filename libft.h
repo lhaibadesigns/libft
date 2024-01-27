@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 23:22:17 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/25 00:23:02 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/01/27 03:48:13 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,13 @@
 # include <unistd.h>
 # include <string.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void *content);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
