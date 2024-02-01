@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:14:40 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:13:51 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:29:53 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	len_s1 = strlen(s1);
-	len_s2 = strlen(s2);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
 	total = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
 	if (!total)
 		return (NULL);

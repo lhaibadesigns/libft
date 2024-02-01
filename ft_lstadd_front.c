@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/27 03:21:41 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/01 01:23:42 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/01/31 20:02:42 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/02/01 01:31:47 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*new_list;
-
-	new_list = malloc(sizeof(t_list));
-	if (new_list == NULL)
-		return (NULL);
-	new_list->content = content;
-	new_list->next = NULL;
-	return (new_list);
+	if (!*lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
 
 /* int	main(void)
 {
-	char s[] = "Hello";
-	t_list	*head = NULL;
-	t_list *result = ft_lstnew(s);
-	if (result != NULL)
-	{
-		printf("this is the content of the new node:%s",(char *)result->content);
-		free(result);
-	}
-	else
-		printf("Memory allocation failed.");
+	t_list *new_list;
+	t_list *lst = NULL;
+	new_list = malloc(sizeof(t_list));
+	if (new_list == NULL)
+		return (1);
+	new_list->content = 5;
+	new_list->next = NULL;
+	ft_lstadd_front(&lst, new_list);
+	printf("%s", (char *)lst->content);
 	return (0);
 } */
