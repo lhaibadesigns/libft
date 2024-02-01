@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 20:02:42 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/01 01:32:43 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:41:31 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!*lst)
+	if (lst)
 	{
 		new->next = *lst;
 		*lst = new;
 	}
 }
 
-/* int	main(void)
+int	main(void)
 {
 	t_list *new_list;
 	t_list *lst = NULL;
@@ -33,4 +33,4 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	ft_lstadd_front(&lst, new_list);
 	printf("%s", (char *)lst->content);
 	return (0);
-} */
+}
