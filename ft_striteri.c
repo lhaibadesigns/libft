@@ -6,17 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 15:13:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:11:46 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:33:34 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* void	f(unsigned int i, char *c)
-{
-	i = 0;
-	*c = 'a';
-} */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {

@@ -6,12 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 15:45:55 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/26 23:04:48 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:34:19 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

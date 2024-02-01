@@ -6,12 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:36 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/26 21:34:09 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/01 01:34:11 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
