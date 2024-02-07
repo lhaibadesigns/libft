@@ -6,25 +6,29 @@
 /*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 00:51:03 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/07 01:13:08 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/07 12:43:00 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 t_list *ft_lstlast(t_list *lst)
 {
-    if (lst == NULL)
+    t_list *temp;
+
+    temp = lst;
+    if (temp == NULL)
         return NULL;
 
-    while (lst->next != NULL)
+    while (temp->next != NULL)
     {
-        lst = lst->next;
+        temp = temp->next;
     }
-    return lst;
+    return temp;
 }
 
-/* int main()
+int main()
 {
     t_list* head = NULL;
     t_list* second = NULL;
@@ -36,10 +40,10 @@ t_list *ft_lstlast(t_list *lst)
     third = (t_list*)malloc(sizeof(t_list));
     numberfor = (t_list*)malloc(sizeof(t_list));
 
-    head->content = (void*)1;
-    second->content = (void*)2;
-    third->content = (void*)3;
-    numberfor->content = (void*)5;
+    head->content = (char *)"hohla";
+    second->content = (char *)"hi";
+    third->content = (char *)"how";
+    numberfor->content = (char *)"are you";
 
     head->next = second;
     second->next = third;
@@ -48,11 +52,12 @@ t_list *ft_lstlast(t_list *lst)
 
     t_list *lastnode = ft_lstlast(head);
 
-    printf("Content of the last node: %p\n", lastnode->content);
+    printf("Content of the last node: %s\n", (char *)lastnode->content);
+    printf("Content of the last node: %s\n", (char *)head->content);
     free(head);
     free(second);
     free(third);
     free(numberfor);
 
     return 0;
-} */
+}
