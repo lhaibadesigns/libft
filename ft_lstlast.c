@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 00:51:03 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/07 12:43:00 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/07 23:37:51 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list *ft_lstlast(t_list *lst)
     return temp;
 }
 
-int main()
+/* int main()
 {
     t_list* head = NULL;
     t_list* second = NULL;
@@ -60,4 +60,4 @@ int main()
     free(numberfor);
 
     return 0;
-}
+} */
