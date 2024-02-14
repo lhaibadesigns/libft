@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 00:59:17 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/14 01:31:59 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/14 01:47:41 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 } */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+    t_list  tmp;
 	while (*lst)
 	{
 		tmp = (*lst)->next;
