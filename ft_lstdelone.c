@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 19:49:12 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/11 21:35:09 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/14 01:31:04 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,19 @@
 
 /* void    leaks()
 {
-    system("leaks -q main");
+	system("leaks -q main");
 } */
-
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    del(lst->content);
-    del(lst);
+	del(lst->content);
+	del(lst);
 }
 
 /* int main()
 {
-    atexit(leaks);
-    char    *s2 = strdup("123");
-    t_list * s = ft_lstnew(s2);
-    ft_lstdelone(s, free);
-    //free(s2);
+	atexit(leaks);
+	char    *s2 = strdup("123");
+	t_list * s = ft_lstnew(s2);
+	ft_lstdelone(s, free);
+	//free(s2);
 } */
