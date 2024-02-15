@@ -6,12 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 12:45:16 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/14 01:31:15 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:39:03 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -21,24 +20,37 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!*lst)
 	{
 		*lst = new;
-		new->next = NULL;
-		return ;
 	}
-	while (temp->next != NULL)
+	else
 	{
-		temp = temp->next;
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = new;
 	}
-	temp->next = new;
-	new->next = NULL;
 }
 
 /* int main()
 {
-	t_list *head = NULL;
-	t_list *last = ft_lstnew((char *)"end");
-   // ft_lstadd_front(&head, ft_lstnew((char *)"amiineeeeee"));
-	ft_lstadd_back(&head, last);
-	printf("the last content is %s\n", (char *)last->content);
-   // printf("head content is %s\n", (char *)head->next->content);
+	t_list * l =  NULL; t_list * l2 =  NULL;
+	int a = 1;
+
+
+	ft_lstadd_back(&l, ft_lstnew((void*)&a));
+	a = 2;
+	ft_lstadd_back(&l, ft_lstnew((void*)&a));
+	a = 3;
+	ft_lstadd_back(&l2, ft_lstnew((void*)&a));
+	a = 4;
+	ft_lstadd_back(&l2, ft_lstnew((void*)&a));
+	//ft_lstadd_back(&l, l2);
+
+	for (; l; )
+	{
+		printf("%d\n", *(int*)l->content);
+		l = l->next;
+	}
+
 	return (0);
 } */

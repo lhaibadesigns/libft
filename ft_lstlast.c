@@ -6,12 +6,11 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 00:51:03 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/14 01:30:55 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/14 22:34:31 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {

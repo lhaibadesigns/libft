@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 19:49:12 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/14 01:31:04 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/14 19:35:37 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
-	del(lst);
+	free(lst);
 }
 
 /* int main()

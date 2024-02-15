@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ael-haib <ael-haib@student.42madrid.com    +#+  +:+       +#+         #
+#    By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 13:12:07 by ael-haib          #+#    #+#              #
-#    Updated: 2024/02/07 13:14:29 by ael-haib         ###   ########.fr        #
+#    Updated: 2024/02/15 01:10:36 by ael-haib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUSSRC = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c
+BONUSSRC = ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
+			ft_lstlast.c ft_lstnew.c ft_lstsize.c
+
 
 OBJECTS = $(SOURCES:.c=.o)
 BONUSOBJ = $(BONUSSRC:.c=.o)
@@ -28,6 +30,8 @@ BONUSOBJ = $(BONUSSRC:.c=.o)
 CC = gcc
 AR = ar
 CFLAGS = -Wall -Wextra -Werror
+
+##########################
 
 GREEN = \033[32m
 RESET = \033[0m
@@ -51,8 +55,13 @@ define PRINT_LOADINGTWO
 	@printf "] 100%%$(RESET)\n"
 endef
 
+##########################
 
 all: $(NAME)
+
+bonus: $(BONUSOBJ)
+	@$(AR) -rcs $@ $^ >/dev/null
+
 
 $(NAME): $(OBJECTS) $(BONUSOBJ)
 	$(PRINT_LOADINGTWO)

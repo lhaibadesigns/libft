@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:12:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/23 06:12:43 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/15 00:53:41 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,4 @@ void	ft_bzero(void *s, size_t n)
 	printf("this is the result: %s\n", str);
 
 	return (0);
-}
- */
+} */
