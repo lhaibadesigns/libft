@@ -6,7 +6,7 @@
 #    By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/21 13:12:07 by ael-haib          #+#    #+#              #
-#    Updated: 2024/02/16 18:33:42 by ael-haib         ###   ########.fr        #
+#    Updated: 2024/02/21 19:48:56 by ael-haib         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUSSRC = ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c \
-			ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstiter.c 
+			ft_lstlast.c ft_lstnew.c ft_lstsize.c ft_lstiter.c ft_lstmap.c
 
 
 OBJECTS = $(SOURCES:.c=.o)
@@ -59,13 +59,14 @@ endef
 
 all: $(NAME)
 
-bonus: $(BONUSOBJ)
-	@$(AR) -rcs $@ $^ >/dev/null
 
 
 $(NAME): $(OBJECTS) $(BONUSOBJ)
 	$(PRINT_LOADINGTWO)
 	@$(AR) -rcs $@ $^ >/dev/null
+
+bonus: $(OBJECTS) $(BONUSOBJ)
+	@ar rcs $(NAME) $(SOURCES) $(BONUSSRC)
 
 %.o: %.c
 	@$(CC) -c $(CFLAGS) $<

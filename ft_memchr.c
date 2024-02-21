@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:13:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/25 01:32:33 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/21 19:28:52 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/* int main()
+/* 
+int main()
 {
-  char s[10] = {10, -1, -10, 56, 89, 0, 5};
-  int *store = ft_memchr( s, 10, 6);
-  printf("this is the result: %d\n", *(int *)ft_memchr( s, 10, 6));
-   printf("this is the result: %d", *store);
+  //char s[10] = {10, -1, -10, 56, 89, 0, 5};
+  //int *store = ft_memchr( s, 10, 6);
+  int	nums[] = {1, 2};
+
+  const char *s = "this";
+  
+  ft_memchr(s, 1, 8);
   return(0);
 } */

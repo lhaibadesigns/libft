@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/11 19:49:12 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/21 19:19:47 by ael-haib         ###   ########.fr       */
+/*   Created: 2024/02/16 20:42:25 by ael-haib          #+#    #+#             */
+/*   Updated: 2024/02/21 19:56:53 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* void    leaks()
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	system("leaks -q main");
-} */
+	t_list	*new_list;
+	t_list	*new_node;
+	void	*set;
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
-{
-	del(lst->content);
-	free(lst);
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
+	{
+		set = f(lst->content);
+		new_node = ft_lstnew(set);
+		if (!new_node)
+		{
+			del(set);
+			ft_lstclear(&new_list, (*del));
+			return (new_list);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
+	}
+	return (new_list);
 }
-
-/* int main()
-{
-	atexit(leaks);
-	char    *s2 = strdup("123");
-	t_list * s = ft_lstnew(s2);
-	ft_lstdelone(s, free);
-	//free(s2);
-} */

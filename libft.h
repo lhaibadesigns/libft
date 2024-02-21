@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 23:22:17 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/16 18:34:13 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/21 19:37:11 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-//t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-//						void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 int					ft_lstsize(t_list *lst);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));

@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:29 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/01/25 03:01:27 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:31:17 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /* int	main(void)
 {
-	const char *s1 = "lorem \n ipsum \t dolor \n sit \t amet";
+	const char *s1 = "       lorem \n ipsum \t dolor \n sit \t amet";
 	const char *set = " ";
 
 	char *trimmed_str = ft_strtrim(s1, set);

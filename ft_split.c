@@ -6,7 +6,7 @@
 /*   By: ael-haib <ael-haib@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 21:06:26 by ael-haib          #+#    #+#             */
-/*   Updated: 2024/02/01 01:30:38 by ael-haib         ###   ########.fr       */
+/*   Updated: 2024/02/21 19:32:53 by ael-haib         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,22 +96,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (token_v);
 }
-/*
-int	main(void)
+
+/* int	main(void)
 {
-	char c = '_';
-	char const *s = "              __Amine_is_the_best__";
-	char **splited = ft_split(s , c);
-	int i;
-
-	for (i= 0; splited[i] != NULL; i++)
-	{
-		printf("Token %d --> %s\n", i, splited[i]);
-	}
-
-	i = 0;
-	while (splited[i] != NULL)
-		free(splited[i++]);
-	free(splited);
-	return (0);
-} */
+	// "amine el haiba"
+	// ' '
+}  */
